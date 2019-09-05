@@ -3201,9 +3201,10 @@ var tapTimer,
 		var e = document.createEvent( 'CustomEvent' ),
 			eDetail = {
 				origEvent:origEvent, 
-				target:origEvent.target, 
+				pointerType:pointerType || 'touch',
 				releasePoint: releasePoint, 
-				pointerType:pointerType || 'touch'
+				target:origEvent.target,
+				rightClick: pointerType === 'mouse' && origEvent.which === 3
 			};
 
 		e.initCustomEvent( 'pswpTap', true, true, eDetail );
