@@ -1,6 +1,3 @@
-var window = options.window || window;
-var document = window.document;
-
 /**
  *
  * Set of generic functions used by gallery.
